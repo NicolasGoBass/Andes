@@ -1,4 +1,75 @@
-Taller 3
-Nicolás Gomez Lozano
-Estrategia y liderazgo
+Taller 3.
+Nicolas Gomez Lozano.
+Estrategia de datos.
+
+#1.	¿La experimentación es siempre necesaria o existen situaciones en las que una decisión puede tomarse sin necesidad de experimentar?
+    La experimentación es una estrategia valiosa y muy poderosa para entender a ciencia cierta que puede ocurrir, por ejemplo en No, la IA no está haciendo que los ingenieros sean diez veces más productivos el autor indicó en el texto que realizó experimentación para probar los diferentes Agentes de IA, de igual forma en el aspecto de desarrollo la experimentación se requiere siempre, lo conocemos como QA, ya que se se hacen experimentos de como funciona la herramienta bajo muchos escenarios para identificar errores, sin embargo en procesos establecidos y claros, si no hay cambios de estrategias o de paradigmas no se requiere experimentación, pero se requiere visibilidad.
+
+#2.Diseñe un experimento basado en las siete preguntas propuestas por Thomke. 
+Tenga en cuenta que como resultado debe tener la capacidad de argumentar y 
+explicar los siguientes puntos: 
+a. Objetivo del experimento: Defina claramente qué se busca lograr. 
+  Determinar si la implementación de controles de calidad automatizados al inicio y al final de la operación reduce los tiempos de ciclo, disminuye errores operativos y aumenta la facturación de la empresa.
+b. Hipótesis nula: Plantee una hipótesis que pueda ser refutada a través del 
+experimento. 
+Hipótesis:
+    ¿Puede la validación de calidad mejorar los tiempos total de la operación?
+    ¿Puede aumentar la facturación introducir mejoras en procesos de calidad automatizada?
+    ¿Puede facilitar la operación el introducir procesos de calidad al inicio y a la salida de la operación?
+c. Criterio de significancia estadística: Establezca el criterio que utilizará para 
+determinar si los resultados obtenidos son significativos (Pueden surgir de 
+criterios empresariales). 
+  Nivel de significancia α = 0.05. sobre un muestreo aleatorio
+d. Respuestas a las preguntas de Thomke: Responda a las preguntas 
+propuestas por el autor respecto a la formulación de hipótesis, aceptación, 
+factibilidad, fiabilidad, causalidad, valor y toma de decisiones. Estas 
+respuestas deben fortalecer el diseño y la justificación del experimento. 
+  El experimento será exitoso si se cumple al menos uno de los siguientes criterios:
+  
+  Reducción del tiempo total de operación ≥ 15%.
+  Disminución de reprocesos ≥ 20%.
+  Incremento de la facturación ≥ 5%.
+  Reducción de incidentes de calidad ≥ 25%.
+#3. Defina las variables independientes y dependientes.  
+a. Analice las posibles limitaciones de los datos disponibles, como sesgos, 
+errores de muestreo, barreras en la cobertura temporal o geográfica. ¿Qué 
+supuestos está haciendo sobre los datos y cómo podrían afectar los 
+resultados del experimento?
+    las principales limitaciones tiene que ver con aspectos tecnologicos, como el uso algunos frameworks, politicas y resticciones. Tambien tiene que ver las aceptación por parte de areas como tecnología que puedan oponerse o restrigir como disponibilización de hardware para este objetivo.
+b. Identifique las causas y efectos relevantes. Evalúe cómo estas relaciones 
+pueden influir en los resultados y el diseño del mismo. Considere también 
+posibles variables confusas que podrían afectar la validez de los resultados 
+y cómo planea controlarlas. 
+    Se he identificado que unos de los mayores causantes del incumplir con los ANS en cuanto a tiempos de respuesta al cliente, es el reproceso que se dá por errores en la información de entrada o las instrucciones.
+c. Explique cómo cada una será medida o controlada, asegurando que el 
+diseño experimental sea robusto y los resultados sean válidos. ¿Existen 
+datos que necesiten ser limpiados o transformados antes de ser utilizados?  
+    se cuenta con el timestamp de cada uno de los pasos, de manera que se puede identificar si hubo reproceso y el motivo, se puede identificar tiempo total de la operación y cuellos de botella, todo esto desde un gestor de procesos. 
+4. Describa los puntos de información específicos que serán utilizados en su 
+experimento. Justifique ¿por qué estos puntos de datos son relevantes y cómo 
+contribuirán a validar o refutar la hipótesis planteada? 
+    Adicionalmente del gestor de procesos, la herramienta que se implemente debe dejar log del tiempo que se demoró cada ejecución con precisión de milisegundos.
+5. Clasifique las fuentes que utilizará (bases de datos internas, APIs, fuentes externas, 
+etc.) y explique cómo se accederá a estos datos. Describa cualquier restricción o 
+consideración especial que deba tener en cuenta al manejar estos activos.  (Puede 
+hacer uso de la plantilla de Excel de “Activos digitales” como referencia).
+    la información se encuentra en datalakes onPremise, y bases de datos del gestor de trabajo, así como el gestor mismo, 
+6. Describa el proceso que seguirá para combinar datos de diferentes fuentes. 
+Considere cómo se manejarán las discrepancias entre los datos y cómo se 
+garantizará que la información consolidada sea coherente y útil para el experimento. 
+    La herramienta que se implementa busca justamente darle al usuario una experiencia centralizada, ya que se pueden centralizar aspectos como APIs, bases de datos SQL y No SQL, con un fuerte manejo de información tabular.
+7. Determine quiénes participarán en su experimento. Especifique los criterios de 
+selección y el rol que cada grupo o individuo desempeñará, asegurando que la 
+muestra sea representativa y relevante para el caso de uso. 
+    En el experimento se requiere como parte del control Analistas de operación Batch, pero se requiere participación Activa backoffice del equipo de tecnología y Arquitectura, para lograr el experimento
+8. Analice el papel de la Big Data en su experimento. ¿Cómo se integrarán grandes 
+volúmenes de datos en el diseño experimental? Explique cómo la Big Data puede 
+ayudar a obtener resultados más precisos, identificar patrones, y mejorar la toma de 
+decisiones. 
+    realmente el foco  de este trabajo es el tratamiento de Bigdata, ya que es una solución en datos, pero adicionalmente se requiere almacenar información de los sucesos y resumenes historicos de todos los procesos que van sucediendo, de manera que se pueda enriquecer, de tal manera que el reto está en definir los puntos de obtención y el tipo de aplicación para que reatroalimente a la herramienta de manera no supervisada.
+9. Reflexione sobre cómo el experimento propuesto contribuirá al éxito de la 
+organización. Explique cómo los resultados esperados pueden influir en la estrategia 
+empresarial, mejorar procesos o generar valor para los stakeholders.
+
+ 
 
